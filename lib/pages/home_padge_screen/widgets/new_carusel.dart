@@ -9,70 +9,75 @@ class NewCarusel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Padding(
-          padding: EdgeInsets.only(left: 8, top: 16, bottom: 6),
-          child: Text(title1, style: titleStyle),
-        ),
-        const Padding(
-          padding: EdgeInsets.only(bottom: 16, left: 8),
-          child: Image(
-            image: AssetImage(linarGrad1),
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Padding(
+            padding: EdgeInsets.only(left: 8, bottom: 6),
+            child: Text(title1, style: titleStyle),
           ),
-        ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height / 2.5,
-          width: double.infinity,
-          child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: newCard.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.only(
-                    left: 8,
-                    top: 8,
-                    right: 6,
-                  ),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width / 2.5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image(
-                          image: AssetImage(newCard[index].imageUrl),
-                        ),
-                        Text(
-                          newCard[index].category,
-                          style: const TextStyle(fontSize: 12),
-                        ),
-                        Text(
-                          newCard[index].description,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              newCard[index].price,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 18),
-                            ),
-                            const Icon(
-                              Icons.currency_ruble_rounded,
-                              size: 18,
-                              weight: 10,
-                            )
-                          ],
-                        ),
-                      ],
+          const Padding(
+            padding: EdgeInsets.only(bottom: 16, left: 8),
+            child: Image(
+              image: AssetImage(linarGrad1),
+            ),
+          ),
+          SizedBox(
+            height: 320,
+            width: double.infinity,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: newCard.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(
+                      left: 8,
+                      top: 8,
+                      right: 6,
                     ),
-                  ),
-                );
-              }),
-        ),
-      ],
+                    child: SizedBox(
+                      width: 160,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image(
+                            image: AssetImage(newCard[index].imageUrl),
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            newCard[index].category,
+                            style: const TextStyle(fontSize: 12),
+                          ),
+                          Text(
+                            newCard[index].description,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 16),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                newCard[index].price,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 18),
+                              ),
+                              const Icon(
+                                Icons.currency_ruble_rounded,
+                                size: 18,
+                                weight: 10,
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }),
+          ),
+        ],
+      ),
     );
   }
 }

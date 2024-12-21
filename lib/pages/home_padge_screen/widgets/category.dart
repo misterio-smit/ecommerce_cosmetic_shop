@@ -7,45 +7,46 @@ class Category extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 8, right: 8, top: 8),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              TextButton(
+    return Container(
+      width: 300,
+      child: Center(
+        child: Wrap(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 4, top: 8, right: 4),
+              child: TextButton(
                 onPressed: () {},
                 style: style,
                 child: const Text(dlyaOchichenia),
               ),
-              TextButton(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 4, top: 8, right: 4),
+              child: TextButton(
                 onPressed: () {},
                 style: style,
                 child: const Text(dlyaUvlagneniya),
               ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              TextButton(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 4, top: 8, right: 4),
+              child: TextButton(
                 onPressed: () {},
                 style: style,
                 child: const Text(dlyaPitaniya),
               ),
-              TextButton(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 4, top: 8, right: 4),
+              child: TextButton(
                 onPressed: () {},
                 style: style,
                 child: const Text(dlyaOmolozgeniya),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

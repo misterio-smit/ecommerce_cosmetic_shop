@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 final style = ButtonStyle(
     foregroundColor: WidgetStateProperty.all(Colors.black87),
-    minimumSize: WidgetStateProperty.all(const Size(180, 60)),
+    minimumSize: WidgetStateProperty.all(Size(170.0, 60.0)),
     shape: WidgetStateProperty.all(
       RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5),

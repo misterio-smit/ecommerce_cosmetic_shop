@@ -6,13 +6,12 @@ class CategoryCarusel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height / 5,
+      height: 150,
       child: Padding(
         padding: const EdgeInsets.only(
           top: 24.0,
-          bottom: 8.0,
         ),
         child: ListView.builder(
           shrinkWrap: true,

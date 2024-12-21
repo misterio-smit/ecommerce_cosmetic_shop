@@ -27,7 +27,7 @@ class HomeCareCarusel extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height / 6,
+            height: 130,
             child: Padding(
               padding: const EdgeInsets.only(
                 top: 8,
@@ -39,8 +39,8 @@ class HomeCareCarusel extends StatelessWidget {
                 itemCount: homeCareList.length,
                 itemBuilder: (context, index) {
                   return SizedBox(
-                    width: MediaQuery.of(context).size.width / 3.5,
-                    height: MediaQuery.of(context).size.height / 4,
+                    width: 120,
+                    height: 120,
                     child: Column(
                       children: [
                         Image(

@@ -9,13 +9,13 @@ class CategorySkinGrid extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height,
       child: Padding(
-        padding: const EdgeInsets.only(left: 16, bottom: 370),
+        padding: const EdgeInsets.only(left: 16, bottom: 370, right: 16),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 20,
               mainAxisSpacing: 10,
-              mainAxisExtent: 300),
+              mainAxisExtent: 320),
           scrollDirection: Axis.vertical,
           itemCount: newCard.length,
           itemBuilder: (context, index) {
